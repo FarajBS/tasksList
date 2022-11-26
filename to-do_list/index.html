@@ -18,9 +18,11 @@
             <!-- ------------------------------------------------------------------------------------------------------ -->
             <!-- ====================================================================================================== -->
             <!-- GOOGLE FONTS -->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Marhey:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+                <!-- ARABIC -->
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Marhey:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+                <!--//-- ARABIC --//-->
             <!--//-- GOOGLE FONTS --//-->
             <!-- ====================================================================================================== -->
             <!-- ------------------------------------------------------------------------------------------------------ -->
@@ -114,14 +116,70 @@
                 <!-- BEGIN: TO-DO_LIST -->
                 <div id="to-doList">
                     <div class="row">
-                        <button id="add-icon" class="col-sm-12">
-                            <span class="material-symbols-outlined">
+                        <button id="add-icon" class="col-sm-12"> 
+                            <span id="add" class="material-symbols-outlined">
                                 add
                             </span>
                         </button>
                     </div>                
                     <!-- ---------------------------------------------------------------------------------------------- -->
-                    <div></div>
+                    <!-- BEGIN: LIST -->
+                    <!-- BEGIN: LIST-TITLES -->
+                    <div id="list-titles" class="row mt-4 p-3 rounded-4">
+                        <div class="col-sm-4">المهمة</div>
+                        <div class="col-sm-2">من</div>
+                        <div class="col-sm-2">إلى</div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-4">الإتمام</div>
+                                <div class="col-sm-4">التعديل</div>
+                                <div class="col-sm-4">حذف</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: LIST-TITLES -->
+                    <!-- BEGIN: LIST -->
+                    <div id="list" class="row mt-3 p-3 rounded-pill">
+                        <div class="col-sm-4" style="margin: auto;">
+                            <b>
+                                قراءة كتاب
+                            </b>
+                            <div class="mt-1" style="font-size: 1vw;">
+                                <span class="material-symbols-outlined" style="padding-left: 0.3vw;">
+                                    calendar_month
+                                </span>
+                                <span>22/11/2022</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-2" style="margin: auto;">8:30</div>
+                        <div class="col-sm-2" style="margin: auto;">10:00</div>
+                        <div class="col-sm-4" style="margin: auto;">
+                            <div class="row">
+                                <div class="col-sm-4" style="padding: 0;">
+                                    <div class="center-list d-flex justify-content-center align-items-center" style="background-color: green;">
+                                        <span class="material-symbols-outlined">
+                                            done
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4" style="padding: 0;">
+                                    <div class="center-list d-flex justify-content-center align-items-center" style="background-color: blue;">
+                                        <span class="material-symbols-outlined">
+                                            edit
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4" style="padding: 0;">
+                                    <div class="center-list d-flex justify-content-center align-items-center" style="background-color: red;">
+                                        <span class="material-symbols-outlined">
+                                            delete
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: LIST -->
                 </div>  
                 <!-- END: TO-DO_LIST -->
             </div>
