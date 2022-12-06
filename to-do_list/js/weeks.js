@@ -120,17 +120,17 @@ document.getElementById('add-icon').addEventListener("click", function()
     document.getElementById('submit-btn').addEventListener("click", function()
     {
         let taskTitle = document.getElementById('taskTitle').value;
-        let timeForm =  document.getElementById('time-from').value;
-        let timeTo =  document.getElementById('time-to').value;
-        if(taskTitle != "" && timeForm != "" && timeTo != "")
+        let dateForm =  document.getElementById('date-from').value;
+        let dateTo =  document.getElementById('date-to').value;
+        if(taskTitle != "" && dateForm != "" && dateTo != "")
         {
             let now = new Date();
             let date = now.getDate() + " / " + (now.getMonth() + 1) + " / " + now.getFullYear();
             let taskobj = {
                 "title": taskTitle,
                 "date": date,
-                "from": timeForm,
-                "to": timeTo,
+                "from": dateForm,
+                "to": dateTo,
                 "isDone": false
             };
             tasks.push(taskobj);
@@ -140,7 +140,7 @@ document.getElementById('add-icon').addEventListener("click", function()
 
             document.getElementById('task-form').style.visibility = "hidden";
 
-            window.location.href = "index.html";
+            window.location.href = "weeks.html";
             
         } else{
             alert('إملأ  المتطلبات الموجودة في النموذج')
@@ -182,20 +182,20 @@ function editTask(index)
     document.getElementById('submit-btn').addEventListener("click", function()
     {
         let newTaskTitle = document.getElementById('taskTitle').value;
-        let newTimeFrom =  document.getElementById('time-from').value;
-        let newTimeTo =  document.getElementById('time-to').value;
-        if(newTaskTitle != "" && newTimeFrom != "" && newTimeTo != "")
+        let newdateForm =  document.getElementById('date-from').value;
+        let newdateTo =  document.getElementById('date-to').value;
+        if(newTaskTitle != "" && newdateForm != "" && newdateTo != "")
         {
             task.title = newTaskTitle
-            task.from = newTimeFrom 
-            task.to = newTimeTo 
+            task.from = newdateForm 
+            task.to = newdateTo 
 
             setItemTasksToStorage();
             fillTasksOnThePage();
             
             document.getElementById('task-form').style.visibility = "hidden";
 
-            window.location.href = "index.html";
+            window.location.href = "weeks.html";
 
         } else{
             alert('لم تقوم بكامل التعديلات')
