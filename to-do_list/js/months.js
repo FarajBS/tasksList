@@ -9,14 +9,14 @@ let tasks = [];
 function setItemTasksToStorage() 
 {
     let tasksString = JSON.stringify(tasks);
-    localStorage.setItem("tasksWeeks", tasksString);
+    localStorage.setItem("tasksMonths", tasksString);
 }
 // --- SETITEM TASKS //
 // ===================================================================================================================== //
 // GETITEM TASKS --- //
 function getItemTasksFromStorage()
 {
-    let retrievedTasks = JSON.parse(localStorage.getItem("tasksWeeks"));
+    let retrievedTasks = JSON.parse(localStorage.getItem("tasksMonths"));
     tasks = retrievedTasks ?? [];
 };
 getItemTasksFromStorage();
@@ -140,7 +140,7 @@ document.getElementById('add-icon').addEventListener("click", function()
 
             document.getElementById('task-form').style.visibility = "hidden";
 
-            window.location.href = "weeks.html";
+            window.location.href = "months.html";
             
         } else{
             alert('إملأ  المتطلبات الموجودة في النموذج')
@@ -195,7 +195,7 @@ function editTask(index)
             
             document.getElementById('task-form').style.visibility = "hidden";
 
-            window.location.href = "weeks.html";
+            window.location.href = "months.html";
 
         } else{
             alert('لم تقوم بكامل التعديلات')
