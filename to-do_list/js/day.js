@@ -42,17 +42,17 @@ function fillTasksOnThePage()
                         <b>
                             ${task.title} 
                         </b>
-                        <div class="mt-1" style="font-size: 1vw;">
+                        <div id="list-form-date" class="mt-1" style="font-size: 1vw;">
                             <span class="material-symbols-outlined" style="padding-left: 0.3vw;">
                                 calendar_month
                             </span>
                             <span>${task.date}</span>
                         </div>
                     </div>
-                    <div class="col-sm-2" style="margin: auto;">${task.from ?? ""}</div>
-                    <div class="col-sm-2" style="margin: auto;">${task.to ?? ""}</div>
-                    <div class="col-sm-4 style="margin: auto;">
-                        <div class="row d-flex justify-content-center align-items-center" style="width: 100%; height: 100%; margin-right: 2vw;">
+                    <div id="taskFrom" class="col-sm-2" style="margin: auto;">${task.from ?? ""}</div>
+                    <div id="taskTo" class="col-sm-2" style="margin: auto;">${task.to ?? ""}</div>
+                    <div id="tasksInd" class="col-sm-4 style="margin: auto;">
+                        <div id="task-index" class="row d-flex justify-content-center align-items-center" style="width: 100%; height: 100%; margin-right: 2vw;">
                             ${task.isDone ?
                             ` 
                                 <div class="col-sm-4">
