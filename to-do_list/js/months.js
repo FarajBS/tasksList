@@ -112,8 +112,7 @@ fillTasksOnThePage();
 // ===================================================================================================================== //
 // ADD TASK FUNCTION //
 document.getElementById('add-icon').addEventListener("click", function()
-{
-    
+{ 
     document.getElementById('task-form').style.visibility = "visible";
 
     // SUBMIT BUTTON //
@@ -143,7 +142,8 @@ document.getElementById('add-icon').addEventListener("click", function()
             window.location.href = "months.html";
             
         } else{
-            alert('إملأ  المتطلبات الموجودة في النموذج')
+            alert('إملأ  المتطلبات الموجودة في النموذج');
+            window.location.href = "months.html";
         }
     });
     //== SUBMIT BUTTON ==//
@@ -152,7 +152,6 @@ document.getElementById('add-icon').addEventListener("click", function()
     document.getElementById('cancel-btn').addEventListener("click", function()
     {
         document.getElementById('task-form').style.visibility = "hidden";
-
     })
     //== CANCEL BUTTON ==//
 });
@@ -198,7 +197,8 @@ function editTask(index)
             window.location.href = "months.html";
 
         } else{
-            alert('لم تقوم بكامل التعديلات')
+            alert('لم تقوم بكامل التعديلات');
+            window.location.href = "months.html";
         }
     });
     //== SUBMIT BUTTON ==//
